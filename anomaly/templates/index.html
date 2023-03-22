@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anomaly Predictor</title>
+  </head>
+  <body>
+    <h1>Home page</h1>
+    <h3>Get your Anomaly predictions here!!!</h3>
+    <p>Enter in the details of a code.</p>
+    <p>We will output a prediction!!</p>
+    <form action="{%url 'result' %}">
+      {% csrf_token %}
+      <p>line count of code</p>
+      <input type="text" name="loc" />
+      <p>cyclomatic complexity</p>
+      <input type="text" name="v" />
+      <p>essential complexity</p>
+      <input type="text" name="ev" />
+      <p>design complexity</p>
+      <input type="text" name="iv" />
+      <p>total operators + operands</p>
+      <input type="text" name="n" />
+      <p>volume</p>
+      <input type="text" name="v1" />
+      <p>program length</p>
+      <input type="text" name="l" />
+      <p>difficulty</p>
+      <input type="text" name="d" />
+      <p>intelligence</p>
+      <input type="text" name="i" />
+      <p>effort</p>
+      <input type="text" name="e" />
+      <p>b</p>
+      <input type="text" name="b" />
+      <p>time estimator</p>
+      <input type="text" name="t" />
+      <p>line count</p>
+      <input type="text" name="loCode_numeric" />
+      <p>count of lines of comments</p>
+      <input type="text" name="loComment_numeric" />
+      <p>count of blank lines</p>
+      <input type="text" name="loBlank_numeric" />
+      <p>LoCodeAndComment Numeric</p>
+      <input type="text" name="locCodeAndComment_numeric" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
